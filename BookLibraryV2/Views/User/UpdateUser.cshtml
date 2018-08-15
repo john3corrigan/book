@@ -1,0 +1,18 @@
+﻿@model BookLibraryV2.Models.UserViewModel
+@{
+    ViewBag.Title = "UpdateUser";
+}
+
+<h2>Update User</h2>
+
+@using (Html.BeginForm("UpdateUser", "User", FormMethod.Post))
+{
+    <div>
+        @Html.HiddenFor(m => m.UserAccount.UserID)
+        <div>
+            @Html.LabelFor(m => m.UserAccount.Username)
+            @Html.TextBoxFor(m => m.UserAccount.Username)
+        </div>
+    </div>
+    <input type="submit" value="Submit" />
+}

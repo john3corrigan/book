@@ -1,0 +1,29 @@
+﻿@model BookLibraryV2.Models.UserViewModel
+@using BookLibraryV2.Models
+@{
+    ViewBag.Title = "ViewUsers";
+}
+
+<h2>View Users</h2>
+
+<table class="table">
+    <tr>
+        <th>User Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Zip Code</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (UserAccount _UserAccount in Model.UserList)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => _UserAccount.Username)</td>
+            <td>@Html.DisplayFor(m=>_UserAccount.Username)</td>
+            <td>@Html.ActionLink("Update", "UpdateUser", "User", routeValues: new { UserID = _UserAccount.UserID }, htmlAttributes: new { @class = "btn " })</td>
+            <td>@Html.ActionLink("Delete", "DeleteUser", "User", routeValues: new { UserID = _UserAccount.UserID }, htmlAttributes: new { @class = "btn " })</td>
+        </tr>
+    }
+</table>

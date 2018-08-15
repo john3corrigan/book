@@ -1,0 +1,21 @@
+﻿@model BookLibraryV2.Models.UserViewModel
+@{
+    ViewBag.Title = "CreateUserInformation";
+}
+
+<h2>Create Your Profile!</h2>
+
+@using (Html.BeginForm("CreateUserInformation", "User", FormMethod.Post))
+{
+    <div class="container">
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserInformation.FirstName)
+            @Html.TextBoxFor(m => m.UserInformation.FirstName)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserInformation.LastName)
+            @Html.TextBoxFor(m => m.UserInformation.LastName)
+        </div>
+    </div>
+    <input type="submit" value="Submit" />
+}
