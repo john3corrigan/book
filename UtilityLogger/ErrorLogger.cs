@@ -13,7 +13,7 @@ namespace UtilityLogger
         {
             string message = string.Format("Time: {0}", DateTime.Now.ToString(""));
             message += Environment.NewLine;
-            message += "----------------------------------------------------------";
+            message += "----------------------------------------------------------\\///";
             message += Environment.NewLine;
             message += string.Format("Message {0}", _errorToWrite.Message);
             message += Environment.NewLine;
