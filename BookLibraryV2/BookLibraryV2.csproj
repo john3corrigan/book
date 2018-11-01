@@ -140,6 +140,7 @@
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\UploadPicture.cshtml" />
     <Content Include="Views\User\CreateUserInformation.cshtml" />
+    <Content Include="Views\test.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
