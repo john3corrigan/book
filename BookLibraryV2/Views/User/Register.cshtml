@@ -3,7 +3,7 @@
 <h2>Register</h2>
 
 @using (Html.BeginForm("Register", "User", FormMethod.Post))
-{
+{@*here is a change for my commit*@
     <div class="container">
         <div class="form-group">
             @Html.LabelFor(m => m.UserAccount.Username)
